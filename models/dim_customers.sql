@@ -1,7 +1,7 @@
 {{config(
     materialized="table"
 )}}
-
+--this is a comment
 
 with customers as (
 
