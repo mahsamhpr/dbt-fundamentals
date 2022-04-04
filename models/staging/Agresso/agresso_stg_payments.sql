@@ -8,5 +8,5 @@ select
     amount / 100 as amount,
     created as created_at
 
-from {{source('exerp', 'payment')}}
+from {{source('agresso', 'payment')}}
 
