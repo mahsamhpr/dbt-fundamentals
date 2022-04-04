@@ -1,11 +1,12 @@
-with customers as (
-
+ --  with customers as(
     select
         id as customer_id,
         first_name,
         last_name
 
-    from stg.customers
+    from {{source('exerp', 'customers')}} -- dbt_test.stg.customers
+  -- )
+  -- select * from customers
 
-)
-select * from customers
+
+

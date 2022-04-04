@@ -1,0 +1,9 @@
+version: 2 
+
+sources:
+- name: exerp
+  database: dbt_test
+  schema: stg
+  tables: 
+        - name: customers
+        - name: orders
