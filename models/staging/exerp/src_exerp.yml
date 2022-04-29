@@ -8,8 +8,8 @@ sources:
         - name: customers
           description: Raw customers data
           columns: 
-            - name: id
-              tests: 
+          - name: id
+          tests: 
                - unique
                - not_null
               

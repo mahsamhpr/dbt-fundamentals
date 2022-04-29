@@ -2,6 +2,7 @@ version: 2
 
 models:
 - name: stg_customers
+  description: one unique customer per row
   columns: 
     - name: customer_id
       tests: 
@@ -15,14 +16,16 @@ models:
       - unique
       - not_null
     - name: status
+      description: '{{ doc("order_status")}}'
       tests:
        - accepted_values:
             values:
-             - shipped
+             - returned
              - completed
              - return_pending
-             - returned
-             - placed 
+             - shipped
+             - placed
+             
     - name: customer_id
       tests:
          - relationships:
