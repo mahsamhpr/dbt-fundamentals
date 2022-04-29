@@ -2,8 +2,10 @@ version: 2
 
 models:
 - name: stg_customers
+  description: one unique customer per row
   columns: 
     - name: customer_id
+      description: The primary key for customers
       tests: 
       - unique
       - not_null
@@ -11,20 +13,32 @@ models:
 - name: stg_orders
   columns:
     - name: order_id
+      description: The primary key for orders
       tests: 
       - unique
       - not_null
     - name: status
+      description: '{{ doc("order_status")}}'
       tests:
        - accepted_values:
             values:
-             - shipped
+             - returned
              - completed
              - return_pending
-             - returned
-             - placed 
+             - shipped
+             - placed
+             
     - name: customer_id
       tests:
          - relationships:
              to: ref('stg_customers')
              field: customer_id
+
+- name: stg_payments
+  columns: 
+    - name: status
+      description: '{{ doc("payment_method")}}'
+      
+
+
+
