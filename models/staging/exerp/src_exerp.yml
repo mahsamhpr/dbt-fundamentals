@@ -6,7 +6,7 @@ sources:
   schema: stg
   tables: 
         - name: customers
-          description: Raw customers data
+          description: Raw customers data .....
           columns: 
           - name: id
             description: primary key for customers data         
