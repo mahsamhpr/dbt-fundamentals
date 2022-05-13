@@ -7,7 +7,7 @@ with orders as  (
 ),
 
 payments as (
-    select * from {{ ref('stg_payments') }}
+    select * from {{ source('exerp','payment') }}
 ),
 
 order_payments as (

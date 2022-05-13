@@ -1,0 +1,19 @@
+version: 2 
+
+sources:
+- name: membersegment
+  database: dbt_test
+  schema: psa
+  tables: 
+        - name: EXERP_FF_SUBSCRIPTION
+        - name: EXERP_SA_SUBSCRIPTION
+        - name: EXERP_FF_SUBSCRIPTION_STATE_LOG
+        - name: EXERP_SA_SUBSCRIPTION_STATE_LOG
+        - name: EXERP_FF_PRODUCT
+        - name: EXERP_SA_PRODUCT
+        - name: EXERP_FF_PRODUCT_GROUP
+        - name: EXERP_SA_PRODUCT_GROUP
+ 
+
+
+         

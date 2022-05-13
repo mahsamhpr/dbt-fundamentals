@@ -1,0 +1,14 @@
+version: 2
+
+models:
+- name: FACT_MEMBER_LIFECYCLE
+  description: contains data about the lifecycle tags of the members such as Active, Onboarding,...
+  columns: 
+    - name: state
+      descripion: -------------
+      tests:
+        - not_null
+- name: FACT_SUBSCRIPTION_LOG 
+  description: contains data about subscriptions...
+  
+    

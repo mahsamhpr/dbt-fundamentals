@@ -38,5 +38,11 @@ models:
           +materialized: table
       staging:         
           +materialized: view
+    membersegment:
+      marts:
+        core:
+          +materialized: table
+      staging:         
+          +materialized: view
 
    
